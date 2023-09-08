@@ -13,15 +13,18 @@ public class ReviewPaymentsPage {
     private WebElement totalPrice;
 
     @FindBy(xpath = "//span[contains(@data-bind,'Place Order')]")
-            private WebElement placeOrderButton;
+    private WebElement placeOrderButton;
     WebDriver driver;
+
     public ReviewPaymentsPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
+
     public WebElement getTotalPrice() {
         return totalPrice;
     }
+
     public SuccesPage orderButtonClick() throws InterruptedException {
         Thread.sleep(3000);
         placeOrderButton.click();

@@ -18,8 +18,9 @@ public class MyAccountPage {
     @FindBy(xpath = "//span[contains(text(),'Jackets')]")
     private WebElement bookmarkJackets;
     private WebDriver driver;
+
     public MyAccountPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
@@ -39,5 +40,7 @@ public class MyAccountPage {
         return new JacketsPage(driver);
     }
 
-    public WebElement DashboardTextCheck() {return DashboardText; }
+    public WebElement DashboardTextCheck() {
+        return DashboardText;
+    }
 }

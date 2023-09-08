@@ -16,8 +16,7 @@ public class RegisterTest extends BaseTest {
                 .openRegisterPage()
                 .fillRegisterDetails(newCustomer)
                 .DashboardTextCheck();
-        Assert.assertEquals(dashboardMessage.getText(),"My Account");
-
+        Assert.assertEquals(dashboardMessage.getText(), "My Account");
 
 
     }

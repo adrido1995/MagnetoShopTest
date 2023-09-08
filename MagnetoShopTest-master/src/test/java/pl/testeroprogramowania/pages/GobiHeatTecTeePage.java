@@ -25,8 +25,9 @@ public class GobiHeatTecTeePage {
     private WebElement proceedToCheckoutButton;
 
     private WebDriver driver;
+
     public GobiHeatTecTeePage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
@@ -38,7 +39,7 @@ public class GobiHeatTecTeePage {
         addToCartButton.click();
         Thread.sleep(1000);
         cartButton.click();
-        SeleniumHelper.waitForElementToBeVisible(driver,proceedToCheckoutButton);
+        SeleniumHelper.waitForElementToBeVisible(driver, proceedToCheckoutButton);
         proceedToCheckoutButton.click();
         return new CartPage(driver);
 

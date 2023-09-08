@@ -20,11 +20,13 @@ public class NeveStudioDanceJacketPage {
     @FindBy(id = "ui-id-21")
     private WebElement bookmarkTees;
     private WebDriver driver;
+
     public NeveStudioDanceJacketPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-    public TeesPage AddToCartAndMoveToTees(){
+
+    public TeesPage AddToCartAndMoveToTees() {
         studioDanceJacketSizeM.click();
         studioDanceJacketColorBlue.click();
         addToCartButton.click();

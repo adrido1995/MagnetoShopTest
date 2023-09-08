@@ -15,28 +15,29 @@ import java.util.stream.Collectors;
 public class CartPage {
 
     @FindBy(xpath = "//input[@name='street[0]']")
-            private WebElement streetAddressInput1;
+    private WebElement streetAddressInput1;
     @FindBy(xpath = "//input[@name='street[1]']")
-            private WebElement streetAddressInput2;
+    private WebElement streetAddressInput2;
     @FindBy(xpath = "//input[@name='city']")
-            private WebElement cityNameInput;
+    private WebElement cityNameInput;
     @FindBy(xpath = "//select[@name='region_id']")
-            private WebElement stateSelectField;
+    private WebElement stateSelectField;
     @FindBy(xpath = "//input[@name='postcode']")
-            private WebElement zipCodeInput;
+    private WebElement zipCodeInput;
     @FindBy(xpath = "//select[@name='country_id']")
-            private WebElement countrySelectField;
+    private WebElement countrySelectField;
     @FindBy(id = "//input[@name='telephone']")
-            private WebElement phoneNumberInput;
+    private WebElement phoneNumberInput;
     @FindBy(xpath = "//input[@value='flatrate_flatrate']")
-            private WebElement flatRateRadioButton;
+    private WebElement flatRateRadioButton;
     @FindBy(xpath = "//button[@data-role='opc-continue']")
     private WebElement continueButton;
     @FindBy(xpath = "//strong[@class='product-item-name']")
     private List<WebElement> productCheckoutList;
     WebDriver driver;
+
     public CartPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
@@ -56,12 +57,12 @@ public class CartPage {
         continueButton.click();
         return new ReviewPaymentsPage(driver);
     }
-        public List<String> getProductCheckoutNameList() {
+
+    public List<String> getProductCheckoutNameList() {
         return productCheckoutList.stream()
                 .map(el -> el.getAttribute("textContent"))
                 .collect(Collectors.toList());
     }
-
 
 
 }

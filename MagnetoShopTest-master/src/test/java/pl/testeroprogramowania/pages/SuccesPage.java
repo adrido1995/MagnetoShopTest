@@ -6,8 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 public class SuccesPage {
 
     WebDriver driver;
+
     public SuccesPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 }

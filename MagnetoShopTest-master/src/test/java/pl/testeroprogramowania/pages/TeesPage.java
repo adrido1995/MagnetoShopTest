@@ -10,8 +10,9 @@ public class TeesPage {
     @FindBy(xpath = "//img[@alt='Gobi HeatTec® Tee']")
     private WebElement gobiHeatTecTee;
     private WebDriver driver;
+
     public TeesPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 

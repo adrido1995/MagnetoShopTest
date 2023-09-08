@@ -21,12 +21,13 @@ public class CreateAnAccountPage {
     @FindBy(xpath = "//button[@class='action submit primary']")
     private WebElement confirmButton;
     private WebDriver driver;
+
     public CreateAnAccountPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
-    public MyAccountPage fillRegisterDetails(NewCustomer newCustomer){
+    public MyAccountPage fillRegisterDetails(NewCustomer newCustomer) {
         firstNameInput.sendKeys(newCustomer.getFirstName());
         lastNameInput.sendKeys(newCustomer.getLastName());
         emailInput.sendKeys(newCustomer.getEmail());

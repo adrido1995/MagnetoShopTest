@@ -13,12 +13,13 @@ public class LogInPage {
     @FindBy(id = "send2")
     private WebElement signInButton;
     private WebDriver driver;
+
     public LogInPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
-    public HomePage fillLogInDetails(String username, String password){
+    public HomePage fillLogInDetails(String username, String password) {
         emailLogInInput.sendKeys(username);
         passwordLogInInput.sendKeys(password);
         signInButton.click();

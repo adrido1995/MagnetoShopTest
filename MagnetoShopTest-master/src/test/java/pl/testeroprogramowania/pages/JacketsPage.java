@@ -10,12 +10,13 @@ public class JacketsPage {
     @FindBy(xpath = "//img[@alt='Neve Studio Dance Jacket']")
     private WebElement neveStudioDanceJacket;
     private WebDriver driver;
+
     public JacketsPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
-    public NeveStudioDanceJacketPage openProductStudioDanceJacket(){
+    public NeveStudioDanceJacketPage openProductStudioDanceJacket() {
         neveStudioDanceJacket.click();
         return new NeveStudioDanceJacketPage(driver);
     }
